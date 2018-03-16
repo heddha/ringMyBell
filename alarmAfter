@@ -1,0 +1,9 @@
+#!/bin/bash
+
+MYTIME=$1
+if [ -n "$MYTIME" ] ; then
+	sleep $MYTIME 
+	vlc --intf dummy /usr/share/sounds/freedesktop/stereo/complete.oga vlc://quit  #insert some cool tone you want the script to play
+else
+	echo -e "Please call this script like so:\n\t \n\t ./alarmAfter timeinSeconds \n or \n\t ./alarmAfter timeInMinutes+m. \n examples: \n\t ./alarmAfter 180 \n\t ./alarmAfter 3m"
+fi
